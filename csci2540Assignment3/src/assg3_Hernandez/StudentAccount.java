@@ -13,18 +13,18 @@ public class StudentAccount {
 	
 	private long acctNo; //Student Account Number
 	private double balance; //Account balance
-	private long acctCounter = 0; //Account Counter for total Student Accounts
+	private static long acctCounter = 0; //Account Counter for total Student Accounts
 	
 	public StudentAccount () {
 		this.balance = 0;
-		this.acctNo = acctCounter;
 		acctCounter++;
+		this.acctNo += acctCounter;
 	}
 	
 	public StudentAccount (double balance) {
 		this.balance = balance;
-		this.acctNo = acctCounter;
 		acctCounter++;
+		this.acctNo += acctCounter;
 	}
 	
 	/**
@@ -48,7 +48,7 @@ public class StudentAccount {
 	 * @return Account Counter as long.
 	 */
 	public long getCounter () {
-		return this.acctCounter;
+		return acctCounter;
 	}
 	
 	/**
@@ -117,7 +117,7 @@ public class StudentAccount {
 	 * Print to console current Account number and Current balance.
 	 */
 	public void printInfo () {
-		System.out.println("\n Account Number: " + this.acctNo);
+		System.out.println("\nAccount Number: " + this.acctNo);
 		System.out.println("Current Balance: " + this.balance);
 	}
 	
@@ -126,7 +126,7 @@ public class StudentAccount {
 	 */
 	@Override
 	public String toString() {
-		return "\n Account Number: " + this.acctNo + "\n Current Balance:" 
+		return "Account Number: " + this.acctNo + "\nCurrent Balance:" 
 				+ this.balance + "\n";
 	}
 	

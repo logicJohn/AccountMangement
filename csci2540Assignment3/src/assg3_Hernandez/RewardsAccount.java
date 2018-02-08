@@ -44,7 +44,7 @@ public class RewardsAccount extends StudentAccount {
 			this.deposit(this.rewards);
 			this.rewards = 0;
 		} else {
-			System.out.println("\n insufficent amount for redeeming rewards. "
+			System.out.println("\nInsufficent amount for redeeming rewards. "
 					+ "Rewards must be at least $25");
 		}
 	}
@@ -56,8 +56,8 @@ public class RewardsAccount extends StudentAccount {
 	 */
 	@Override
 	public String toString () {
-		return "\nAccount Number: " + this.getAcctNo() + "\nCurrent Balance:" 
-				+ this.getBalance() + "\n Rewards Balance:" + this.rewards + "\n";
+		return "Account Number: " + this.getAcctNo() + "\nCurrent Balance:" 
+				+ this.getBalance() + "\nRewards Balance:" + this.rewards + "\n";
 	}
 	
 	/**
@@ -70,7 +70,7 @@ public class RewardsAccount extends StudentAccount {
 		if (depositedAmount >= 100) {
 			this.rewards += 5;
 		}
-		this.deposit(depositedAmount);
+		super.deposit(depositedAmount);
 	}
 	
 	/**
@@ -78,7 +78,7 @@ public class RewardsAccount extends StudentAccount {
 	 */
 	@Override
 	public void printInfo () {
-		System.out.println("\n Account Number: " + this.getAcctNo());
+		System.out.println("\nAccount Number: " + this.getAcctNo());
 		System.out.println("Current Balance: " + this.getBalance());
 		System.out.println("Rewards Balance: " + this.rewards);
 	}
