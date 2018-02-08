@@ -41,8 +41,8 @@ public class StudentAccountDemo {
 		System.out.println(fifth.getBalance());
 		System.out.println(sixth.getBalance());
 		
-		System.out.println(first.getCounter());
-		System.out.println(second.getCounter());
+		System.out.println(StudentAccount.getCounter());
+		System.out.println(RewardsAccount.getCounter());
 		
 		first.setBalance(500);
 		System.out.println(first.getBalance());
