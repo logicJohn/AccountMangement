@@ -47,7 +47,7 @@ public class StudentAccount {
 	 * Gets the given total accounts counter.
 	 * @return Account Counter as long.
 	 */
-	public long getCounter () {
+	public static long getCounter () {
 		return acctCounter;
 	}
 	
